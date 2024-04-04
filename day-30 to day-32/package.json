@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "chalk": "^5.3.0"
+  },
+  "name": "day-30-to-day-32",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
