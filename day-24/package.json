@@ -1,0 +1,16 @@
+{
+  "name": "auto_table_generator",
+  "version": "1.0.1",
+  "description": "This is auto generated table generator",
+  "main": "main.js",
+  "type": "module",
+  "bin": "main.js",
+    "devDependencies": {
+    "@types/inquirer": "^9.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
