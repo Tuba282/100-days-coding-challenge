@@ -1,0 +1,2802 @@
+
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class=""><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta id="descriptionTag" name="description" content="This is a description for the site.">
+    <title>BFFP</title>
+    <link id="favicon" rel="icon" href="https://heyleia.com/images/favicon.png">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <script src="https://heyleia.com/js/analytics.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://heyleia.com/css/sweetalert.css" rel="stylesheet">
+    <script src="https://heyleia.com/js/swal.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:800,800i&amp;display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:800,800i&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300&amp;display=swap" rel="stylesheet">
+    
+    <style id="fontFamilyStyle">
+    
+    h1, h2, h3, h4, h5, h6, h1 div, h2 div, h3 div, h4 div, h5 div, h6 div {
+        font-family: 'Poppins', sans-serif;
+    }
+    p, span, label, a, button, strong, div, em {
+        font-family: 'Roboto Slab', serif;
+    }
+    </style>
+    <link href="https://heyleia.com/css/leia.css" rel="stylesheet">
+    <script>    
+        $.browser = {}; $.support.opacity = true;
+    </script>
+    <script src="/lib/fancybox/jquery.fancybox-1.3.4.pack.js?v=1712227366"></script>
+    <script src="/lib/fancybox/jquery.easing-1.3.pack.js"></script>
+    <script src="/lib/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+    <script>
+        var setCategoryClicksBackup = function() {
+            $(".categoryButton").unbind();
+            $('.categoryButton').click(function(){
+                // let offsetHeight = document.getElementById('galleryRowContainer').offsetHeight.toString() + 'px';
+                var value = $(this).attr('data-filter');
+                // $('#galleryRowContainer').css({'min-height':offsetHeight}); 
+
+                // setTimeout(function(){
+                //     $('#galleryRowContainer').animate({'min-height':'0'});
+                // },3000)
+
+                if (value === 'all') {
+                    $('.categoryFilter').show('1000');
+                    $(this).addClass('categoryButtonSelected');
+                    $('.categoryButton').not(this).removeClass('categoryButtonSelected');
+                } else if ($(this).hasClass('categoryButtonSelected')) {
+                    $('.categoryFilter').show('1000');
+                    $(this).removeClass('categoryButtonSelected');
+                    $('.allCategoryButton').addClass('categoryButtonSelected');
+                }
+                else {
+                    $('.categoryFilter').not('.' + value).hide('3000');
+                    $('.categoryFilter').filter('.' + value).show('3000');
+                    $('.allCategoryButton').removeClass('categoryButtonSelected');
+                    $('.categoryButton').not(this).removeClass('categoryButtonSelected');
+                    $(this).toggleClass('categoryButtonSelected');
+                }
+            });
+
+            $("a[rel=scrollGroup]").fancybox({
+                'transitionIn'		: 'fade',
+                'transitionOut'		: 'fade',
+                'titlePosition' 	: 'over',
+                'type'              : 'image',
+                'titleFormat'		: function(title) {
+                    return '<span id="fancybox-title-over">' + title + '';
+                }
+            });
+        }
+    </script>
+    
+<script async="" crossorigin="anonymous" src="https://edge.fullstory.com/s/fs.js"></script><script async="" crossorigin="anonymous" src="https://edge.fullstory.com/s/fs.js"></script></head>
+<body data-new-gr-c-s-check-loaded="14.1166.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1166.0">
+<nav id="mainMenu" style="opacity: 1; display: block;">
+    <button class="menuButton" id="trigger-overlay" style="opacity: 1;" fdprocessedid="b9v28s" altonclick="null" althref="null">
+        <i class="openMenuIcon fa fa-bars" aria-hidden="true" altonclick="null" althref="null"></i>
+    </button>
+    <div id="menuOverlaySection" class="overlay overlay-contentpush" style="opacity: 1;">
+        <button id="close-menu" class="overlay-close" altonclick="null" althref="null" fdprocessedid="t9c9ts">
+            <i class="closeMenuIcon fa fa-times" aria-hidden="true" altonclick="null" althref="null"></i>
+        </button>
+        <nav id="mainNav" role="navigation" style="display: block;">
+            <a id="menuTitle" class="navbar-brand page-scroll" altonclick="null" href="#">BFFP</a>
+            <hr id="menuTitleHr">
+            <ul id="menuItems" class="nav navbar-nav">
+                
+                <li class="menuItemLi">
+                    <a id="aboutMenuItem" class="menuItemA" altonclick="null" href="#about">About</a>
+                </li>
+                <li class="menuItemLi">
+                    <a id="featuresMenuItem" class="menuItemA" altonclick="null" href="#features">Features</a>
+                </li>
+                <li class="menuItemLi">
+                    <a id="galleryMenuItem" class="menuItemA" altonclick="null" href="#gallery">Gallery</a>
+                </li>
+                <li class="menuItemLi">
+                    <a id="teamMenuItem" class="menuItemA" altonclick="null" href="#team">Team</a>
+                </li>
+                
+                <li class="menuItemLi">
+                    <a id="blogMenuItem" class="menuItemA" altonclick="null" href="#blog">Blog</a>
+                </li><li class="menuItemLi">
+                    <a id="contactMenuItem" class="menuItemA" altonclick="null" href="#contact">Contact</a>
+                </li>
+            <li class="menuItemLi">
+                    <a id="newItem6560" class="menuItemA" altonclick="null" althref="">Job / Career</a>
+                </li></ul>
+        </nav>
+    </div>
+    <style>
+        #mainMenu {
+            word-break: break-word;
+        }
+
+        #mainMenu .floatingToolbox {
+            z-index: 10000 !important;
+        }
+
+        #trigger-overlay {
+            left: 50px;
+            top: 50px;
+            font-size: 30px;
+            background: rgba(0,0,0,0);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .overlay nav {
+            top: 40%;
+        }
+
+        #menuOverlaySection {
+            background: rgba(0,0,0,0.5);
+            width: 20%;
+            min-width: 250px;
+            word-wrap: break-word;
+            overflow-y: scroll;
+            overflow: -moz-scrollbars-none;
+            -ms-overflow-style: none;
+        }
+
+        #menuOverlaySection::-webkit-scrollbar { 
+            width: 0 !important 
+        }
+
+        #menuTitle {
+            color: white;
+            font-size: 40px;
+            line-height: normal;
+            text-transform: uppercase;
+            display: table;
+        }
+
+        #menuTitleHr {
+            border: 2px solid white;
+            width: 90%;
+            float: left;
+            margin-left: 4%;
+        }
+
+        #close-menu {
+            color: white;
+            background: rgba(0,0,0,0);
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        #menuItems .menuItemA {
+            color: white;
+            transition: background 0.6s ease 0s !important;
+            font-size: 20px;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+        #menuItems .menuItemA:hover, #menuItems .menuItemA:active, #menuItems .menuItemA:focus {
+            background: rgb(86,86,86) !important;
+            color: white;
+        }
+
+        .menuItemLi {
+            width: 100%;
+        }
+
+        @media only screen and (max-width : 900px) {
+
+            #menuOverlaySection {
+                background: rgba(0,0,0,0.8);
+            }
+        }
+
+        @media only screen and (max-width : 767px) {
+
+            .overlay nav {
+                top: 30%;
+            }
+        }
+    </style>
+</nav>
+        <script>
+            $(document).ready(function() {
+                $('nav').css('display', 'block');
+                $('nav').slideDown();
+            });
+        </script>
+        <script src="/js/modernizer.js" class="overlayScript"></script>
+        <script src="/js/bankers.js" class="overlayScript"></script>
+        <script src="/js/menu.js" class="overlayScript"></script>
+<header style="margin-bottom: 0px; background: url(&quot;https://images.unsplash.com/photo-1542810634-71277d95dcbb?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMjE1M3wwfDF8c2VhcmNofDV8fGhlbHBpbmclMjBwZW9wbGV8ZW58MHx8fHwxNzEyMjI5OTg1fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080&quot;) center center / cover no-repeat fixed;" class="">
+
+        <div class="sectionOverlay" id="headerOverlay" style="background: rgba(0, 0, 0, 0.3)"></div>
+        <div id="outerHeader" class="noCustomElement">
+    <div id="headerContainer" class="noCustomElement">
+        <div id="headerContent" class="noCustomElement">
+            <div class="row noCustomElement">
+                <div id="headerBox" class="col-md-10 col-md-offset-1 noCustomElement">
+                    <img id="headerLogoImage" src="/img/4f4Yt-mUkrV-5JPIB-h9AYS-Mwbw4.png" altonclick="null" althref="null"><div id="headerTitleWrap"><h1 id="headerTitle" class="headerTitles" altonclick="null" althref="null">Better Future For Pakistan</h1></div>
+                    <div id="headerSubtitleWrap"><h3 id="headerSubtitle" class="headerSubtitles" altonclick="null" althref="null">One Step One Voice One Future</h3></div>
+                    <div id="headerButtons"><div><a class="headerButton" altonclick="null" href="/shop">Explore About us on ...</a></div></div>
+                    <div id="iconContainer">
+                        <i id="facebookHeader" class="headerIcon animate fab fa-facebook" altonclick="null" althref="null" style="background: rgba(0, 0, 0, 0); color: rgb(255, 255, 255);"></i>
+                        <i id="instagramHeader" class="headerIcon animate fab fa-instagram" altonclick="null" althref="null" style="background: rgba(0, 0, 0, 0); color: rgb(255, 255, 255);"></i>
+                        <i id="twitterHeader" class="headerIcon animate fab fa-twitter" altonclick="null" althref="null" style="background: rgba(0, 0, 0, 0); color: rgb(255, 255, 255);"></i>
+                        <i id="linkedinHeader" class="headerIcon animate fab fa-youtube" altonclick="null" althref="null" style="background: rgba(0, 0, 0, 0); color: rgb(255, 255, 255);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style type="text/css">
+
+        #headerContent {
+            color: white;
+            text-align: left;
+            overflow: hidden;
+            word-break: break-word;
+        }   
+
+        #headerBox {
+            padding: 12px 50px 42px;
+        }
+
+        #headerTitle {
+            font-size: 90px;
+            letter-spacing: .03em;
+        }
+
+        #headerSubtitle {
+            font-size: 25px;
+        }
+
+        #headerButtons {
+            margin-top: 40px;
+        }
+
+        .headerButton {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 6px 42px;
+            border-radius: 20px;
+            border: 2px solid white;
+            background-color: transparent;
+            transition: 0.5s;
+            display: inline-block;
+        }
+
+        .headerButton:hover {
+            color: white;
+            background-color: rgba(86,86,86,0.5);
+            text-decoration: none;
+        }
+
+        .animate {
+            animation: fromLeft 2s cubic-bezier(0.175, 0.885, 0.32, 1.175);
+            animation-fill-mode: forwards; 
+        }
+
+        .headerIcon {
+            margin-top: 30px;
+            margin-right: 30px;
+            font-size: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .headerIcon:hover {
+            opacity: 0.5;
+        }
+
+        #facebookHeader {
+            animation-delay: .2s;
+        }
+        
+        #instagramHeader {
+            animation-delay: .4s;
+        }
+        
+        #twitterHeader {
+            animation-delay: .6s;
+        }
+        
+        #linkedinHeader {
+            animation-delay: .8s;
+        }
+
+        @keyframes fromLeft {
+            
+            0% {
+                transform: rotateY(0deg);
+                -webkit-transform: rotateY(0deg);
+            }
+
+            100% {
+                transform: rotateY(360deg);
+                -webkit-transform: rotateY(360deg);
+            }
+        }
+
+        header .customTitle {
+            font-size: 25px;
+            display: block;
+        }
+
+        header .customParagraph {
+            font-size: 20px;
+            display: block;
+        }
+
+        header .customLink,
+        header .customLink a {
+            color: white;
+            font-size: 20px;
+            display: block;
+            width: 100%;
+        }
+
+        header .customLink:hover {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        header .customIcon {
+            font-size: 25px;
+        }
+
+        header .customTitle,
+        header .customParagraph,
+        header .customLink,
+        header .customIcon,
+        header .customButton,
+        header .customImage,
+        header .customEmbed {
+            margin: 10px 0;
+        }
+        
+        header #headerSubtitleWrap .customTitle,
+        header #headerSubtitleWrap .customParagraph,
+        header #headerSubtitleWrap .customLink,
+        header #headerSubtitleWrap .customIcon,
+        header #headerSubtitleWrap .customButton,
+        header #headerSubtitleWrap .customImage,
+        header #headerSubtitleWrap .customEmbed,
+        header #iconContainer .customTitle,
+        header #iconContainer .customParagraph,
+        header #iconContainer .customLink,
+        header #iconContainer .customIcon,
+        header #iconContainer .customButton,
+        header #iconContainer .customImage,
+        header #iconContainer .customEmbed {
+            margin: 20px 0 0;
+        }
+       
+        header #headerButtons .customTitle,
+        header #headerButtons .customParagraph,
+        header #headerButtons .customLink,
+        header #headerButtons .customIcon,
+        header #headerButtons .customButton,
+        header #headerButtons .customImage,
+        header #headerButtons .customEmbed {
+            margin: 30px 0 0;
+        }
+
+        @media only screen and (max-width : 767px) {
+            
+            #headerContent {
+                text-align: center;
+            }
+
+            #headerTitle {
+                font-size: 40px;
+                letter-spacing: 0.01em;
+            }
+
+            #iconContainer {
+                margin-left: 30px;
+            }
+
+            header .customTitle {
+                font-size: 22px;
+            }
+
+            header .customParagraph {
+                font-size: 18px;
+            }
+
+            header .customLink a {
+                font-size: 18px;
+            }
+
+            header #iconContainer .customTitle,
+            header #iconContainer .customParagraph,
+            header #iconContainer .customLink,
+            header #iconContainer .customIcon,
+            header #iconContainer .customImageContainer,
+            header #iconContainer .customButtonContainer,
+            header #iconContainer .customEmbed {
+                margin-left: -25px;
+            }
+        }
+
+        @media only screen and (max-width : 320px) {
+
+            .headerIcon {
+                margin-right: 25px;
+            }
+        }
+    </style>
+</div>
+        <style>
+
+            header {
+                background: url('/img/DPnVl-NnjBC-hVJsE-V48pM-Fd8rD.jpeg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: top;
+                background-attachment: fixed;
+            }
+            #headerLogoImage {
+                position: fixed;
+                left: 3%;
+                bottom: 10px;
+                width: 200px;
+                max-width: 30%;
+                z-index: 100;
+            }
+        </style>
+        
+        
+        
+    </header>
+    
+<section id="about">
+            <div class="sectionOverlay" id="aboutOverlay" style="background: rgba(0, 0, 0, 0)"></div>
+            <div id="outerAbout" class="outerSection noCustomElement">
+    <div id="aboutContainer" class="sectionContainer noCustomElement">
+        <div id="aboutContent" class="sectionContent container-fluid noCustomElement">
+            <div class="row noCustomElement">
+                <div id="aboutTitleWrap" class="col-lg-12 col-xs-12">
+                    <h2 id="aboutTitle" class="aboutTitles" altonclick="null" althref="null" style="color: rgb(255, 255, 255); background: rgba(0, 0, 0, 0);">Who We Are</h2>
+                </div>
+            </div>
+            <div class="row noCustomElement">
+                <div id="aboutParaWrap" class="col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 noCustomElement">
+                    <div id="aboutParagraph1Wrap"><p id="aboutParagraph1" class="aboutParagraph" altonclick="null" althref="null" style="text-align: center;">Better Future For Pakistan specialises in designing, managing and implementing local, provincial, national and international projects in development cooperation. Since it’s establishment we have presented ourselves as a recognized actor in the development and corporate sector, for providing field management solutions. We support our partners and clients with expertise, knowledge and capacities to meet their development objectives and ensure long lasting and sustainable results in different location of Pakistan. Our expertise covers the field management and logistical support throughout project life cycle,  feasibility studies, formative evaluations. We provide localized solutions for concept development, designing, planning, implementing, monitoring, and evaluating of multiple researches, studies, and projects.Better Future For Pakistan specialises in designing, managing and implementing local, provincial, national and international projects in development cooperation.<br><br><br>&nbsp;Since it’s establishment we have presented ourselves as a recognized actor in the development and corporate sector, for providing field management solutions. We support our partners and clients with expertise, knowledge and capacities to meet their development objectives and ensure long lasting and sustainable results in different location of Pakistan. Our expertise covers the field management and logistical support throughout project life cycle,  feasibility studies, formative evaluations. We provide localized solutions for concept development, designing, planning, implementing, monitoring, and evaluating of multiple researches, studies, and projects.  </p></div>
+                    <div id="aboutParagraph2Wrap"></div>
+                </div>
+            </div>
+            <div id="aboutImageWrap" class="row noCustomElement">
+                <div class="col-lg-4 col-lg-offset-4 noCustomElement">
+                    <div id="aboutImage1"><img class="aboutImages" src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMjE1M3wwfDF8c2VhcmNofDF8fGhlbHBpbmclMjBwZW9wbGV8ZW58MHx8fHwxNzEyMjI5OTg1fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" altonclick="null" althref="null"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #about {
+            color: black;
+        }
+
+        #about .aboutImageBg {
+            color: white;
+        }
+        
+        #aboutContent {
+            text-align: center;
+            padding-top: 0 !important;
+        }
+
+        #aboutTitleWrap {
+            padding: 45px 0;
+            background-color: rgba(86,86,86,0.7);
+            color: white;
+        }
+
+        #aboutTitle {
+            color: white;
+            font-size: 32px;
+        }
+
+        #aboutParaWrap {
+            margin-top: 48px;
+            margin-bottom: 48px;
+        }
+
+        .aboutParagraph {
+            line-height: 1.9;
+        }
+
+        #aboutParagraph1 {
+            margin-bottom: 24px;
+        }
+
+        #aboutImageWrap {
+            margin-bottom: 64px;
+        }
+
+        .aboutImages {
+            width: 100%;
+        }
+
+        #about .aboutImageBg .aboutImages {
+            border: 1px solid white;
+        }
+
+        #about .customTitle {
+            font-size: 32px;
+            display: block;
+        }
+
+        #about .customParagraph {
+            font-size: 14px;
+            line-height: 1.9;
+            display: block;
+        }
+
+        #about .customLink {
+            color: black;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+        }
+
+        #about .aboutImageBg .customLink {
+            color: white;
+        }
+
+        #about .customLink:hover {
+            opacity: 0.5;
+            text-decoration: none;
+        }
+
+        #about .customIcon {
+            font-size: 30px;
+        }
+
+        #about .customTitle,
+        #about .customParagraph,
+        #about .customLink,
+        #about .customIcon,
+        #about .customButton,
+        #about .customImage,
+        #about .customEmbed {
+            margin: 10px 0;
+        }
+
+        #about #aboutTitleWrap .customLink {
+            color: white;
+        }
+        
+        #about #aboutTitleWrap .customTitle,
+        #about #aboutTitleWrap .customParagraph,
+        #about #aboutTitleWrap .customLink,
+        #about #aboutTitleWrap .customIcon,
+        #about #aboutTitleWrap .customButton,
+        #about #aboutTitleWrap .customImage,
+        #about #aboutTitleWrap .customEmbed,
+        #about #aboutParagraph2Wrap .customTitle,
+        #about #aboutParagraph2Wrap .customParagraph,
+        #about #aboutParagraph2Wrap .customLink,
+        #about #aboutParagraph2Wrap .customIcon,
+        #about #aboutParagraph2Wrap .customButton,
+        #about #aboutParagraph2Wrap .customImage,
+        #about #aboutParagraph2Wrap .customEmbed,
+        #about #aboutImage1 .customTitle,
+        #about #aboutImage1 .customParagraph,
+        #about #aboutImage1 .customLink,
+        #about #aboutImage1 .customIcon,
+        #about #aboutImage1 .customButton,
+        #about #aboutImage1 .customImage,
+        #about #aboutImage1 .customEmbed {
+            margin: 20px 0 0;
+        }
+        
+        #about #aboutParagraph1Wrap .customTitle,
+        #about #aboutParagraph1Wrap .customParagraph,
+        #about #aboutParagraph1Wrap .customLink,
+        #about #aboutParagraph1Wrap .customIcon,
+        #about #aboutParagraph1Wrap .customButton,
+        #about #aboutParagraph1Wrap .customImage,
+        #about #aboutParagraph1Wrap .customEmbed {
+            margin: 0 0 30px;
+        }
+
+        @media only screen and (max-width : 800px) {
+
+            #aboutImage1 {
+                margin-bottom: 18px;
+            }
+        }
+
+        @media only screen and (max-width : 767px) {
+
+            #aboutTitleWrap {
+                padding: 56px 10px;
+            }
+
+            #about #aboutTitleWrap .customImage {
+                padding: 0 30px;
+            }
+        }
+    </style>
+</div>
+            <style>
+                #aboutContainer {
+                background: rgb(255,255,255);
+            }
+            </style>
+        </section>
+<section id="features">
+            <div class="sectionOverlay" id="featuresOverlay" style="background: rgba(0, 0, 0, 0.3);"></div>
+            <div id="outerFeatures" class="outerSection noCustomElement">
+    <div id="featuresContainer" class="sectionContainer featuresImageBg noCustomElement customImageBg" style="background: url(&quot;https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMjE1M3wwfDF8c2VhcmNofDF8fGhlbHBpbmclMjBwZW9wbGV8ZW58MHx8fHwxNzEyMjI5OTg1fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080&quot;) center center / cover no-repeat fixed;">
+        <div id="featuresContent" class="sectionContent container-fluid noCustomElement">
+            <div id="featuresRow" class="row noCustomElement">
+                <div class="outerGrid col-sm-5 col-sm-offset-1 col-xs-12 noCustomElement">
+                    <div class="innerGridTable noCustomElement">
+                        <div class="innerTableContent noCustomElement">
+                            <div id="featuresImage"><img class="featuresImages" id="featuresImg" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMjE1M3wwfDF8c2VhcmNofDV8fGVkdWNhdGlvbmFsJTIwdHJhaW5pbmd8ZW58MHx8fHwxNzEyMjI5Mzg4fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080" altonclick="null" althref="null"></div>
+                        </div>
+                    </div>
+                </div> 
+                <div id="featuresInfoSide" class="outerGrid col-sm-5 col-xs-12 noCustomElement">
+                    <div class="innerGridTable noCustomElement">
+                        <div class="innerTableContent noCustomElement">
+                            <div id="featuresTitleWrap"><h2 id="featuresTitle" class="featuresTitles" altonclick="null" althref="null">Our Qualities</h2></div>
+                            <div id="featuresParagraphWrap"><p id="featuresParagraph" class="featuresParagraph" altonclick="null" althref="null">We support the 2030 Development Agenda and Sustainable Development Goals, and customize them in Pakistani context. This enables us to further integrate our thematic and technical expertise of field management in Pakistan and align our interventions to the SDG targets.We support the 2030 Development Agenda and Sustainable Development Goals, and customize them in Pakistani context. This enables us to further integrate our thematic and technical expertise of field management in Pakistan and align our interventions to the SDG targets.</p></div>
+                            <div id="featuresRowContainer" class="noCustomElement">
+                                <!-- featuresTemplate start --><div class="features1 row noCustomElement">
+                                    <div class="featuresTemplate">
+                                        <div class="featuresIconInner outerGrid col-sm-6 col-xs-5 noCustomElement">
+                                            <div class="innerGridTable noCustomElement">
+                                                <div class="featuresIcons innerTableContent"><i class="featuresIcon fa fa-calendar" altonclick="null" althref="null"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="featuresHeaderWrap outerGrid col-sm-6 col-xs-6 noCustomElement">
+                                            <div class="innerGridTable noCustomElement">
+                                                <div class="headerWrap innerTableContent noCustomElement">
+                                                    <h5 class="featuresHeader" altonclick="null" althref="null">On Time</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div><div class="features1 row noCustomElement">
+                                    <div class="featuresTemplate">
+                                        <div class="featuresIconInner outerGrid col-sm-6 col-xs-5 noCustomElement">
+                                            <div class="innerGridTable noCustomElement">
+                                                <div class="featuresIcons innerTableContent"><i class="featuresIcon fas fa-balance-scale" altonclick="null" althref="null"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="featuresHeaderWrap outerGrid col-sm-6 col-xs-6 noCustomElement">
+                                            <div class="innerGridTable noCustomElement">
+                                                <div class="headerWrap innerTableContent noCustomElement">
+                                                    <h5 class="featuresHeader" altonclick="null" althref="null">Calculated</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div><div class="features1 row noCustomElement">
+                                    <div class="featuresTemplate">
+                                        <div class="featuresIconInner outerGrid col-sm-6 col-xs-5 noCustomElement">
+                                            <div class="innerGridTable noCustomElement">
+                                                <div class="featuresIcons innerTableContent"><i class="featuresIcon fa fa-user" altonclick="null" althref="null"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="featuresHeaderWrap outerGrid col-sm-6 col-xs-6 noCustomElement">
+                                            <div class="innerGridTable noCustomElement">
+                                                <div class="headerWrap innerTableContent noCustomElement">
+                                                    <h5 class="featuresHeader" altonclick="null" althref="null">Trusted</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div><div class="features1 row noCustomElement">
+                                    <div class="featuresTemplate">
+                                        <div class="featuresIconInner outerGrid col-sm-6 col-xs-5 noCustomElement">
+                                            <div class="innerGridTable noCustomElement">
+                                                <div class="featuresIcons innerTableContent"><i class="featuresIcon fas fa-users" altonclick="null" althref="null"></i></div>
+                                            </div>
+                                        </div>
+                                        <div class="featuresHeaderWrap outerGrid col-sm-6 col-xs-6 noCustomElement">
+                                            <div class="innerGridTable noCustomElement">
+                                                <div class="headerWrap innerTableContent noCustomElement">
+                                                    <h5 class="featuresHeader" altonclick="null" althref="null">Dedicated</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div><!-- featuresTemplate end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+
+        #features {
+            color: black;
+        }
+
+        #features .featuresImageBg {
+            color: white;
+        }
+
+        .featuresImages {
+            width: 100%;
+        }
+
+        #features .featuresImageBg .featuresImages {
+            border: 2px solid white;
+        }
+
+        #featuresRow,
+        .features1 {
+            display: flex;
+        }
+
+        #featuresTitle {
+            margin-top: 0;
+            font-size: 30px;
+        }
+
+        #featuresParagraph {
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 24px 0;
+        }
+
+        .features1 {
+            margin-top: 28px;
+            display: flex;
+        }
+
+        .featuresTemplate {
+            width: 100%;
+        }
+
+        .featuresIconInner {
+            padding-right: 0;
+            text-align: right;
+        }
+
+        .featuresIcon {
+            font-size: 40px;
+        }
+
+        .featuresHeaderWrap {
+            text-align: left;
+        }
+    
+        .featuresHeader {
+            font-size: 16px;
+        }
+
+        .headerWrap {
+            border-left: 2px solid rgb(86,86,86);
+            padding-left: 10px;
+        }
+
+        #features .featuresImageBg .headerWrap {
+            border-color: white;
+        }
+
+        #features .customTitle {
+            font-size: 30px;
+            display: block;
+        }
+
+        #features #featuresRowContainer .customTitle {
+            font-size: 16px;
+        }
+
+        #features .customParagraph {
+            font-size: 13px;
+            line-height: 1.6;
+            display: block;
+        }
+        
+        #features #featuresRowContainer .customParagraph {
+            line-height: normal;
+        }
+
+        #features .customLink {
+            color: black;
+            font-size: 15px;
+            display: block;
+            width: 100%;
+        }
+
+        #features .featuresImageBg .customLink {
+            color: white;
+        }
+
+        #features .customLink:hover {
+            opacity: 0.6;
+            text-decoration: none;
+        }
+
+        #features .customIcon {
+            font-size: 30px;
+        }
+
+        #features .customTitle,
+        #features .customParagraph,
+        #features .customLink,
+        #features .customIcon, 
+        #features .customButton,
+        #features .customImage,
+        #features .customEmbed {
+            margin: 10px 0;
+        }
+
+        @media only screen and (max-width : 767px) {
+
+            #featuresRow {
+                display: initial;
+            }
+
+            #featuresTitle {
+                margin: 32px 0;
+            }
+
+            #featuresParagraphWrap {
+                margin-bottom: 38px; 
+            }
+
+            #featuresParagraph {
+                line-height: 1.75;
+            }
+
+            .features1 {
+                margin-top: 30px;
+            }
+
+            #features .customParagraph {
+                line-height: 1.75;
+            }
+        }
+    </style>
+</div>
+            <style>
+                #featuresContainer {
+                background: url('/img/charity-egUNC-oIsaQ-QqxPb-82fyd-L2Gve.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            </style>
+        </section>
+<section id="gallery">
+            <script>
+                // script start 
+                $.browser = {}; $.support.opacity = true;
+                // script end
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+            <script src="/lib/fancybox/jquery.easing-1.3.pack.js"></script>
+            <script src="/lib/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+            <link href="/lib/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet">
+            <div class="sectionOverlay" id="galleryOverlay" style="background: rgba(0, 0, 0, 0)"></div>
+            <div id="outerGallery" class="outerSection noCustomElement">
+    <div id="galleryContainer" class="sectionContainer noCustomElement">
+        <div id="galleryContent" class="sectionContent container-fluid noCustomElement">
+            <div class="row noCustomElement">
+                <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12 noCustomElement">
+                    <div id="galleryTitleWrap" class="noCustomElement">
+                        <div id="galleryTitleWrap"><h2 id="galleryTitle" class="galleryTitles" altonclick="null" althref="null">Our Gallery</h2></div>
+                        <div id="galleryTitleHrWrap"><hr id="galleryTitleHr"></div>
+                        <div id="gallerySubtitleWrap"><h4 id="gallerySubtitle" class="gallerySubtitles" altonclick="null" althref="null"></h4></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row noCustomElement">
+                <div class="col-md-10 col-md-offset-1 col-sm-12 noCustomElement">
+                    <div id="galleryBottom" class="row noCustomElement">
+                        <div class="outerGrid col-sm-3 noCustomElement">
+                            <div class="innerGridTable noCustomElement">
+                                <div class="innerTableContent noCustomElement">
+                                    <div id="categoryButtonContainer">
+                                        <div id="categoryButtonRow" class="buttons4 noCustomElement">
+                                            <div class="categoryButtonContainer noCustomElement">
+                                                <div class="categoryButtonWrap noCustomElement"><a id="allCategoriesBtn" class="categoryButton allCategoryButton categoryButtonSelected" data-filter="all" altonclick="null" althref="null">All Categories</a></div>
+                                            </div>
+                                            <div class="categoryButtonContainer noCustomElement">
+                                                <div class="categoryButtonWrap noCustomElement"><a class="categoryButton" data-filter="category1" altonclick="null" althref="null">Category 1</a></div>
+                                            </div>
+                                            <div class="categoryButtonContainer noCustomElement">
+                                                <div class="categoryButtonWrap noCustomElement"><a class="categoryButton" data-filter="category2" altonclick="null" althref="null">Category 2</a></div>
+                                            </div>
+                                            <div class="categoryButtonContainer noCustomElement">
+                                                <div class="categoryButtonWrap noCustomElement"><a class="categoryButton" data-filter="category3" altonclick="null" althref="null">Category 3</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="outerGrid col-sm-9 noCustomElement">
+                            <div class="innerGridTable noCustomElement">
+                                <div class="innerTableContent noCustomElement">
+                                    <div id="galleryRowContainer" class="noCustomElement">
+                                        <!-- galleryTemplate start --><div class="gallery3 row">
+                                            <div class="categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1">
+                                                <div class="innerGridTable galleryImage noCustomElement">
+                                                    <a rel="scrollGroup" href="/img/charity-I9Yas-eA3lM-BOO3V-fRSg2-pAj26.jpg" class="fancybox innerTableContent" title="Photo 1" altonclick="null">
+                                                        <img class="galleryImages img-fluid" src="/img/charity-I9Yas-eA3lM-BOO3V-fRSg2-pAj26.jpg" altonclick="null" althref="null">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category2">
+                                                <div class="innerGridTable galleryImage noCustomElement">
+                                                    <a rel="scrollGroup" href="/img/charity-kLsj7-2fiz5-Krtu2-AzMok-hBaLV.jpg" class="fancybox innerTableContent" title="Photo 2" altonclick="null">
+                                                        <img class="galleryImages img-fluid" src="/img/charity-kLsj7-2fiz5-Krtu2-AzMok-hBaLV.jpg" altonclick="null" althref="null">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category3">
+                                                <div class="innerGridTable galleryImage noCustomElement">
+                                                    <a rel="scrollGroup" href="/img/charity-qLNzY-0TrQ2-gu4d8-oZfkN-Fs3im.jpg" class="fancybox innerTableContent" title="Photo 3" altonclick="null">
+                                                        <img class="galleryImages img-fluid" src="/img/charity-qLNzY-0TrQ2-gu4d8-oZfkN-Fs3im.jpg" altonclick="null" althref="null">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category1">
+                                                <div class="innerGridTable galleryImage noCustomElement">
+                                                    <a rel="scrollGroup" href="/img/charity-FJOGh-ehSc2-J6aYa-4dRzz-nu4Hq.jpg" class="fancybox innerTableContent" title="Photo 4" altonclick="null">
+                                                        <img class="galleryImages img-fluid" src="/img/charity-FJOGh-ehSc2-J6aYa-4dRzz-nu4Hq.jpg" altonclick="null" althref="null">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category2">
+                                                <div class="innerGridTable galleryImage noCustomElement">
+                                                    <a rel="scrollGroup" href="/img/6E34Z-TxGXH-sGrav-AUUMR-ay8Ce.jpeg" class="fancybox innerTableContent" title="Photo 5" altonclick="null">
+                                                        <img class="galleryImages img-fluid" src="/img/6E34Z-TxGXH-sGrav-AUUMR-ay8Ce.jpeg" altonclick="null" althref="null">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="categoryFilter outerGrid col-sm-4 col-xs-12 noCustomElement category3">
+                                                <div class="innerGridTable galleryImage noCustomElement">
+                                                    <a rel="scrollGroup" href="./" class="fancybox innerTableContent" title="Photo 6" altonclick="null">
+                                                        <img class="galleryImages img-fluid" src="/img/charity-MX95z-XbRf8-tHBHH-XpTHO-OxBXP.jpg" altonclick="null" althref="null">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            </div><!-- galleryTemplate end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #gallery {
+            color: black;
+        }
+
+        #gallery .galleryImageBg {
+            color: white;
+        }
+
+        #galleryContent {
+            word-wrap: break-word;
+            text-align: center;
+        }
+
+        #galleryTitle {
+            font-size: 50px;
+            letter-spacing: .065em;
+            margin-bottom: 15px;
+        }
+
+        #galleryTitleHr {
+            border: 2px solid rgb(86,86,86);
+            width: 10%;
+        }
+
+        #gallery .galleryImageBg #galleryTitleHr {
+            border-color: white;
+        }
+
+        #gallerySubtitle {
+            font-size: 35px;
+            margin-bottom: 60px;
+        }
+
+        #galleryBottom {
+            display: flex;
+        }
+
+        .categoryButtonContainer {
+            display: inline-block;
+            width: 100%;
+        }
+
+        .categoryButtonWrap {
+            width: 100%;
+        }
+
+        .categoryButton {
+            color: rgb(0,0,0);
+            border: 1px solid rgb(86,86,86);
+            cursor: pointer;
+            display: inline-block;
+            padding: 15px 50px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .allCategoryButton {
+            padding: 15px 35px;
+        }
+
+        #gallery .galleryImageBg .categoryButton {
+            color: white;
+            border-color: white;
+        }
+
+        .categoryButton:focus {
+            color: white;
+        }
+
+        .categoryButton:hover,
+        .categoryButtonSelected {
+            color: white;
+            text-decoration: none;
+            background-color: rgb(86,86,86);
+        }
+
+        #gallery .galleryImageBg .categoryButton:hover,
+        #gallery .galleryImageBg .categoryButton:focus,
+        #gallery .galleryImageBg .categoryButtonSelected {
+            color: rgb(86,86,86);
+            background-color: white;
+        }
+
+        .categoryFilter {
+            margin-top: 10px;
+            padding: 0 5px;
+        }
+
+        .galleryImages {
+            height: 250px;
+            width: 100%;
+            border-radius: 2px;
+            object-fit: cover;
+            display: block;
+            transition: 0.4s;
+        }
+
+        .galleryImages:hover {
+            transform: scale(1.05);
+        }
+
+        #gallery .galleryImageBg .galleryImages {
+            border: 1px solid white;
+        }
+
+        #fancybox-title {
+            color: white;
+            font-size: 16px;
+            text-shadow: 1px 1px black;
+            margin-left: 0 !important;
+            padding: 0 !important;
+            background: rgb(86,86,86);
+        }
+
+        #fancybox-title-over {
+            text-align: center;
+            border: none;
+        }
+
+        #fancybox-content {
+            border: 2px solid rgb(86,86,86) !important;
+            background: white;
+        }
+
+        #fancybox-close {
+            right: -35px;
+        }
+
+        #fancybox-right {
+            right: -20px;
+        }
+
+        #fancybox-bg-nw,
+        #fancybox-bg-ne,
+        #fancybox-bg-sw,
+        #fancybox-bg-se {
+            display: none;
+        }
+
+        /* * * * * * * * * */
+
+        #gallery .customTitle {
+            font-size: 40px;
+            letter-spacing: .065em;
+            display: block;
+        }
+
+        #gallery .customParagraph {
+            font-size: 18px;
+            display: block;
+        }
+
+        #gallery .customLink {
+            color: black;
+            font-size: 18px;
+            display: block;
+            width: 100%;
+        }
+
+        #gallery .galleryImageBg .customLink {
+            color: white;
+        }
+
+        #gallery .customLink:hover {
+            opacity: 0.6;
+            text-decoration: none;
+        }
+
+        #gallery .customIcon {
+            font-size: 32px;
+        }
+
+        #gallery .customTitle,
+        #gallery .customParagraph,
+        #gallery .customLink,
+        #gallery .customIcon, 
+        #gallery .customButton,
+        #gallery .customImage,
+        #gallery .customEmbed {
+            margin: 10px 0;
+        }
+
+        @media only screen and (max-width : 1050px) {
+            
+            .categoryButton {
+                padding: 10px 25px
+            }
+
+            .allCategoryButton {
+                padding: 10px 10px;
+            }
+
+            .galleryImages {
+                height: 220px;
+            }
+        }
+        
+        @media only screen and (max-width : 800px) {
+
+            #galleryTitle {
+                font-size: 40px;
+            }
+
+            .galleryImages {
+                height: 190px;
+            }
+        }
+                            
+        @media only screen and (max-width : 767px) {
+
+            #galleryTitle {
+                font-size: 36px;
+                letter-spacing: 0.03em;
+            }
+
+            #gallerySubtitle {
+                font-size: 22px;
+            }
+
+            #categoryButtonContainer {
+                margin-bottom: 40px;
+            }
+
+            .categoryButton {
+                padding: 15px 60px
+            }
+
+            .allCategoryButton {
+                padding: 15px 45px;
+            }
+
+            .galleryImages {
+                height: 320px;
+            }
+
+            .galleryTitleOuter {
+                margin-bottom: 70px;
+            }
+
+            #galleryBottom {
+                display: initial;
+            }
+        }
+    </style>
+    <script>
+    // script start
+
+        var setCategoryClicks = function() {
+            $(".categoryButton").unbind();
+            $('.categoryButton').click(function(){
+                // let offsetHeight = document.getElementById('galleryRowContainer').offsetHeight.toString() + 'px';
+                var value = $(this).attr('data-filter');
+                // $('#galleryRowContainer').css({'min-height':offsetHeight}); 
+
+                // setTimeout(function(){
+                //     $('#galleryRowContainer').animate({'min-height':'0'});
+                // },3000)
+
+                if (value === 'all') {
+                    $('.categoryFilter').show('1000');
+                    $(this).addClass('categoryButtonSelected');
+                    $('.categoryButton').not(this).removeClass('categoryButtonSelected');
+                } else if ($(this).hasClass('categoryButtonSelected')) {
+                    $('.categoryFilter').show('1000');
+                    $(this).removeClass('categoryButtonSelected');
+                    $('.allCategoryButton').addClass('categoryButtonSelected');
+                }
+                else {
+                    $('.categoryFilter').not('.' + value).hide('3000');
+                    $('.categoryFilter').filter('.' + value).show('3000');
+                    $('.allCategoryButton').removeClass('categoryButtonSelected');
+                    $('.categoryButton').not(this).removeClass('categoryButtonSelected');
+                    $(this).toggleClass('categoryButtonSelected');
+                }
+            });
+
+            $("a[rel=scrollGroup]").fancybox({
+                'transitionIn'		: 'fade',
+                'transitionOut'		: 'fade',
+                'titlePosition' 	: 'over',
+                'type'              : 'image',
+                'titleFormat'		: function(title) {
+                    return '<span id="fancybox-title-over">' + title + '</span>';
+                }
+            });
+        }
+
+    // script end
+    </script>
+</div>
+            <style>
+                #galleryContainer {
+                background: rgb(255,255,255);
+            }
+            </style>
+            <script>
+                $(document).ready(function(){
+                    setCategoryClicks();
+                });
+            </script>
+        </section>
+
+<section id="team">
+            <div class="sectionOverlay" id="teamOverlay" style="background: rgba(0 ,0, 0, 0.5)"></div>
+            <div id="outerTeam" class="outerSection noCustomElement">
+    <div id="teamContainer" class="sectionContainer teamImageBg noCustomElement">
+        <div id="teamContent" class="sectionContent container-fluid noCustomElement">
+            <div id="teamTop" class="row noCustomElement">
+                <div class="outerGrid col-lg-4 col-sm-6 col-xs-12 noCustomElement">
+                    <div class="innerGridTable noCustomElement">
+                        <div id="teamTitleWrap" class="innerTableContent">
+                            <h2 id="teamTitle" class="teamTitles" altonclick="null" althref="null">Meet the Team</h2>
+                        </div>
+                    </div>
+                </div>
+                <div id="teamParaWrap" class="outerGrid col-md-5 col-sm-6 col-xs-12 noCustomElement">
+                    <div class="innerGridTable noCustomElement">
+                        <div id="teamParagraphWrap" class="innerTableContent">
+                            <p id="teamParagraph" class="teamParagraphs" altonclick="null" althref="null">Better Future for Pakistan (BFFP) is a multi-disciplinary management consulting firm. It was established on 1st June 2013 and registered on 6th September, 2021 under partnership act 1932 in district East of Karachi, Sindh, Pakistan by a group of committed development workers. Present BFFP is governed by an autonomous partners.Better Future for Pakistan (BFFP) is a multi-disciplinary management consulting firm. It was established on 1st June 2013 and registered on 6th September, 2021 under partnership act 1932 in district East of Karachi, Sindh, Pakistan by a group of committed development workers. Present BFFP is governed by an autonomous partners.Better Future for Pakistan (BFFP) is a multi-disciplinary management consulting firm. It was established on 1st June 2013 and registered on 6th September, 2021 under partnership act 1932 in district East of Karachi, Sindh, Pakistan by a group of committed development workers. Present BFFP is governed by an autonomous partners.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row noCustomElement">
+                <div class="col-lg-10 col-lg-offset-1 col-sm-12 col-sm-offset-0 noCustomElement">
+                    <div id="teamRowContainer" class="noCustomElement">
+                        <!-- teamTemplate start --><div class="team4 row noCustomElement">
+                            <div class="teamTemplate outerGrid col-md-3 col-sm-3 col-xs-12 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberImage"><img class="teamMemberImages" src="/img/team/JacobLee.jpg" altonclick="null" althref="null"></div>
+                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">Jacob Lee</h3></div>
+                                        <div class="teamMemberTitleWrap"><h3 class="teamMemberTitle" altonclick="null" althref="null">Chief Executive Officer</h3></div>
+                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Jacob, our founder and director, boasts years of industry expertise and an inspirational commitment to our vision. Without leadership like this, we would not be who we are today.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="teamTemplate outerGrid col-md-3 col-sm-3 col-xs-12 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberImage"><img class="teamMemberImages" src="/img/team/TimRoberts.jpg" altonclick="null" althref="null"></div>
+                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">Tim Roberts</h3></div>
+                                        <div class="teamMemberTitleWrap"><h3 class="teamMemberTitle" altonclick="null" althref="null">Client Relations Specialist</h3></div>
+                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Tim joined the team in 2011 and has spent his entire working career in customer relations and continues to excel in his field.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="teamTemplate outerGrid col-md-3 col-sm-3 col-xs-12 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberImage"><img class="teamMemberImages" src="/img/team/MeganGarcia.jpg" altonclick="null" althref="null"></div>
+                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">Megan Garcia</h3></div>
+                                        <div class="teamMemberTitleWrap"><h3 class="teamMemberTitle" altonclick="null" althref="null">Head of Sales</h3></div>
+                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Megan was instrumental in our record breaking sales. She joined the team in 2016 and her leadership continues to drive the progress of the sales team.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="teamTemplate outerGrid col-md-3 col-sm-3 col-xs-12 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberImage"><img class="teamMemberImages" src="/img/team/LindseyCampbell.jpg" altonclick="null" althref="null"></div>
+                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">Lindsay Campbell</h3></div>
+                                        <div class="teamMemberTitleWrap"><h3 class="teamMemberTitle" altonclick="null" althref="null">Marketing Director</h3></div>
+                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Lindsay’s creativity and brand thinking helped make the company’s mark on the industry. Since joining the company in 2014, her leadership has driven the team to incredible success.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div><div class="team4 row noCustomElement">
+                            <div class="teamTemplate outerGrid col-md-3 col-sm-3 col-xs-12 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberImage"><img class="teamMemberImages" src="/img/team/EricHernandez.jpg" altonclick="null" althref="null"></div>
+                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">Eric Hernandez</h3></div>
+                                        <div class="teamMemberTitleWrap"><h3 class="teamMemberTitle" altonclick="null" althref="null">Chief Financial Officer</h3></div>
+                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Once Eric took over as CFO, our investment strategy really began to take shape. His well-rounded background in finance and accounting is a significant driver of success.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="teamTemplate outerGrid col-md-3 col-sm-3 col-xs-12 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberImage"><img class="teamMemberImages" src="/img/team/AlexKing.jpg" altonclick="null" althref="null"></div>
+                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">Alex King</h3></div>
+                                        <div class="teamMemberTitleWrap"><h3 class="teamMemberTitle" altonclick="null" althref="null">Project Manager</h3></div>
+                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Alex’s dedication to her position is second to none. She is well respected by her team as well as the entire industry. She has been meeting deadlines and getting things done right with us since 2012.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="teamTemplate outerGrid col-md-3 col-sm-3 col-xs-12 noCustomElement">
+                                <div class="innerGridTable noCustomElement">
+                                    <div class="innerTableContent noCustomElement">
+                                        <div class="teamMemberImage"><img class="teamMemberImages" src="/img/team/EmilyYoung.jpg" altonclick="null" althref="null"></div>
+                                        <div class="teamMemberNameWrap"><h3 class="teamMemberName" altonclick="null" althref="null">Emily Young</h3></div>
+                                        <div class="teamMemberTitleWrap"><h3 class="teamMemberTitle" altonclick="null" althref="null">Lead Developer</h3></div>
+                                        <div class="teamMemberTextWrap"><p class="teamMemberText" altonclick="null" althref="null">Emily is a certified computer engineer and has won numerous awards in the field. She has over fifteen years experience as an engineer in a variety of technical platforms.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div><!-- teamTemplate end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #team {
+            color: black;
+        }
+
+        #team .teamImageBg {
+            color: white;
+        }
+
+        #teamContent {
+            word-wrap: break-word;
+        }
+
+        #teamTop {
+            display: flex;
+            margin-bottom: 40px;
+        }
+
+        #teamTitleWrap {
+            text-align: right;
+            margin-right: 15px;
+        }
+
+        #teamTitle {
+            font-size: 48px;
+            letter-spacing: .09em;
+            text-indent: .09em;
+            margin: 0;
+        }
+
+        #teamParaWrap {
+            border-left: 2px solid rgb(86,86,86);
+        }
+
+        #team .teamImageBg #teamParaWrap {
+            border-color: white;
+        }
+
+        #teamParagraphWrap {
+            margin: 15px 0 15px 15px;
+        }
+
+        #teamParagraph {
+            font-size: 12px;
+            line-height: 1.75;
+            margin-bottom: 0;
+            padding-left: 15px;
+        }
+
+        .team4 {
+            /* display: flex; */
+            margin: 0;
+        }
+
+        .teamTemplate {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .teamMemberImages {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        #team .teamImageBg .teamMemberImages {
+            border: 1px solid white;
+        }
+
+        .teamMemberName {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            margin: 8px 0 0;
+        }
+
+        .teamMemberTitle {
+            color: rgb(86,86,86);
+            font-size: 18px;
+            font-weight: bold;
+            margin: 6px 0;
+        }
+
+        #team .teamImageBg .teamMemberTitle {
+            color: white;
+        }
+
+        .teamMemberText {
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+
+        /* * * * * * * * */
+
+        #team .customTitle {
+            font-size: 40px;
+            letter-spacing: .09em;
+            text-indent: .09em;
+            display: block;
+        }
+
+        #team #teamRowContainer .customTitle {
+            font-size: 24px;
+            letter-spacing: .05em;
+        }
+
+        #team .customParagraph {
+            font-size: 12px;
+            line-height: 1.75;
+            display: block;
+        }
+
+        #team #teamRowContainer .customParagraph {
+            letter-spacing: .05em;
+        }
+
+        #team .customLink {
+            color: black;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+        }
+
+        #team .teamImageBg .customLink {
+            color: white;
+        }
+
+        #team .customLink:hover {
+            opacity: 0.6;
+            text-decoration: none;
+        }
+
+        #team .customIcon {
+            font-size: 32px;
+        }
+
+        #team .customTitle,
+        #team .customParagraph,
+        #team .customLink,
+        #team .customIcon,
+        #team .customButton,
+        #team .customImage,
+        #team .customEmbed {
+            margin: 10px 0;
+        }
+
+        #team #teamTitleWrap .customIcon,
+        #team #teamTitleWrap .customButton,
+        #team #teamTitleWrap .customImage {
+            margin: 0 0 10px;
+        }
+
+        #team #teamParagraphWrap .customTitle,
+        #team #teamParagraphWrap .customParagraph,
+        #team #teamParagraphWrap .customLink,
+        #team #teamParagraphWrap .customIcon,
+        #team #teamParagraphWrap .customButton,
+        #team #teamParagraphWrap .customImage,
+        #team #teamParagraphWrap .customEmbed {
+            margin: 10px 0 0;
+        }
+
+        #team .teamMemberImage .customIcon,
+        #team .teamMemberImage .customButton,
+        #team .teamMemberImage .customImage {
+            margin: 10px 0 0;
+        }
+        
+        #team .teamMemberNameWrap .customTitle,
+        #team .teamMemberNameWrap .customParagraph,
+        #team .teamMemberNameWrap .customLink,
+        #team .teamMemberNameWrap .customIcon,
+        #team .teamMemberNameWrap .customButton,
+        #team .teamMemberNameWrap .customImage,
+        #team .teamMemberNameWrap .customEmbed  {
+            margin: 5px 0 0;
+        }
+        
+        #team .teamMemberTitleWrap .customTitle,
+        #team .teamMemberTitleWrap .customParagraph,
+        #team .teamMemberTitleWrap .customLink,
+        #team .teamMemberTitleWrap .customIcon,
+        #team .teamMemberTitleWrap .customButton,
+        #team .teamMemberTitleWrap .customImage,
+        #team .teamMemberTitleWrap .customEmbed  {
+            margin: 0 0 5px;
+        }
+        
+        #team .teamMemberTextWrap .customTitle,
+        #team .teamMemberTextWrap .customParagraph,
+        #team .teamMemberTextWrap .customLink,
+        #team .teamMemberTextWrap .customIcon,
+        #team .teamMemberTextWrap .customButton,
+        #team .teamMemberTextWrap .customImage,
+        #team .teamMemberTextWrap .customEmbed  {
+            margin: 5px 0 0;
+        }
+
+        @media only screen and (max-width : 1050px) {
+
+            .teamTemplate {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            .teamMemberName {
+                font-size: 20px;
+            }
+
+            #team #teamRowContainer .customTitle {
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (max-width : 800px) {
+
+            .teamTemplate {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        @media only screen and (max-width : 767px) {
+
+            #teamTop,
+            .team4 {
+                display: initial;
+            }
+
+            #teamTitleWrap {
+                text-align: center;
+                margin-right: 0;
+            }
+
+            #teamTitle {
+                font-size: 40px;
+                margin-bottom: 15px;
+            }
+
+            #teamParaWrap {
+                border-left: none;
+                border-top: 2px solid rgb(86,86,86);
+                text-align: center;
+            }
+
+            #teamParagraphWrap {
+                padding-top: 10px;
+            }
+            
+            #teamParagraph {
+                margin-bottom: 30px;
+                padding-left: 0;
+            }
+
+            .teamMemberImages {
+                height: auto;
+            }
+        }
+    </style>
+</div>
+            <style>
+                #teamContainer {
+                background: url('/img/charity-I9Yas-eA3lM-BOO3V-fRSg2-pAj26.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            </style>
+        </section>
+<section id="blog">
+            <div class="sectionOverlay" id="blogOverlay" style="background: rgba(0, 0, 0, 0)"></div>
+            <div id="outerBlog" class="outerSection noCustomElement">
+    <div id="blogContainer" class="sectionContainer noCustomElement">
+        <div id="blogContent" class="sectionContent container-fluid v">
+            <div class="row noCustomElement">
+                <div class="col-sm-10 col-sm-offset-1 noCustomElement">
+                    <div class="blogIcons"><i class="blogIcon fas fa-rss" altonclick="null" althref="null"></i></div>
+                    <div id="blogTitleWrap"><h2 id="blogTitle" class="blogTitles" altonclick="null" althref="null">Posts</h2></div>
+                    <div id="blogSubtitleWrap"><h4 id="blogSubtitle" class="blogSubtitles" altonclick="null" althref="null"></h4></div>
+                </div>
+            </div>
+            <div id="noPostBlog" class="row noCustomElement" style="display: none;">
+                <div class="col-sm-8 col-sm-offset-2 noCustomElement">
+                    <div id="noPostBlogTitleWrap"><h2 id="noPostBlogTitle" altonclick="null" althref="null">There is no content here yet, but check back soon!</h2></div>
+                </div>
+            </div>
+            <div class="row noCustomElement">
+                <div class="col-md-10 col-md-offset-1 col-sm-12 noCustomElement">
+                    <div id="blogRowContainer" class="noCustomElement">
+                        <!-- blogTemplate start --><div class="blog2 row"></div><!-- blogTemplate end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #blog {
+            color: black;
+            word-break: break-word;
+        }
+
+        #blog .blogImageBg {
+            color: white;
+        }
+
+        #blogContent {
+            text-align: center;
+            word-break: break-word;
+        }
+
+        #noPostBlogTitleWrap {
+            margin-top: 80px;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        #noPostBlogTitle {
+            font-size: 30px;
+            letter-spacing: .035em;
+            margin: 10px 0;
+        }
+
+        #blog .blogImageBg #noPostBlogTitleWrap {
+            border-color: white;
+        }
+
+        .blogIcon {
+            font-size: 40px;
+        }
+
+        #blogTitle {
+            font-size: 45px;
+            margin: 10px 0;
+        }
+        
+        #blogSubtitle {
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+        .posts2 {
+            display: flex;
+        }
+
+        .postOuter {
+            margin-top: 30px;
+        }
+
+        .blogRow {
+            display: flex;
+            border: solid 1px black;
+            margin: 2px;
+        }
+
+        #blog .blogImageBg .blogRow {
+            border: solid 2px white;
+            background: rgba(0,0,0,0.3);
+        }
+
+        .blogImageOuter {
+            padding: 0;
+        }
+
+        .blogImages {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            margin-left: 0;
+        }
+
+        #blog .blogImageBg .blogImages {
+            border: 1px solid white;
+        }
+
+        .postTitle {
+            color: black;
+            text-align: left;
+            font-size: 24px;
+            margin: 10px 10px 20px 0;
+        }
+
+        #blog .blogImageBg .postTitle {
+            color: white;
+        }
+
+        .blogButtonWrap {
+            margin-bottom: 10px;
+        }
+
+        .blogButton {
+            color: black;
+            padding: 5px;
+            border: 2px solid black;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+            display: list-item;
+            list-style-type: none;
+        }
+
+        .blogButton:focus {
+            color: black;
+        }
+
+        .blogButton:hover {
+            color: white;
+            border: 2px solid black;
+            background-color: black;
+            text-decoration: none;
+        }
+
+        #blog .blogImageBg .blogButton {
+            color: white;
+            border-color: white;
+        }
+
+        #blog .blogImageBg .blogButton:hover {
+            color: black;
+            background: white;
+        }
+
+        /* * * * * * * * */
+
+        #blog .customTitle {
+            font-size: 45px;
+            display: block;
+        }
+
+        #blog #noPostBlogTitleWrap .customTitle {
+            font-size: 30px;
+        }
+
+        #blog .customParagraph {
+            font-size: 18px;
+            display: block;
+        }
+
+        #blog .customLink {
+            color: black;
+            font-size: 18px;
+            display: block;
+            width: 100%;
+        }
+
+        #blog .blogImageBg .customLink {
+            color: white;
+        }
+
+        #blog .customLink:hover {
+            opacity: 0.6;
+            text-decoration: none;
+        }
+
+        #blog .customIcon {
+            font-size: 36px;
+        }
+
+        #blog .customTitle,
+        #blog .customParagraph,
+        #blog .customLink,
+        #blog .customIcon,
+        #blog .customButton,
+        #blog .customImage,
+        #blog .customEmbed {
+            margin: 10px 0;
+        }
+
+        #blog .blogIcons .customIcon,
+        #blog .blogIcons .customButton,
+        #blog .blogIcons .customImage {
+            margin: 15px 0 0;
+        }
+
+        @media only screen and (max-width : 1050px) {
+
+            .postTitle {
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (max-width : 991px) {
+
+            .posts2 {
+                display: initial;
+            }
+        }
+        
+        @media only screen and (max-width : 800px) {
+
+            .postTitle {
+                font-size: 18px;
+            }
+        }
+
+        @media only screen and (max-width : 767px) {
+
+            .blogRow {
+                display: table;
+                margin: 0;
+            }
+
+            .postTitle {
+                font-size: 16px;
+                margin: 10px 0 20px;
+            }
+
+            .blogImages {
+                width: 50%;
+                height: 220px;
+                margin-top: 10px;
+            }
+        }
+
+        @media only screen and (max-width : 575px) {
+            
+            .blogImages {
+                width: 80%;
+            }
+        }
+        
+        @media only screen and (max-width : 450px) {
+            
+            .blogImages {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</div>
+            <style>
+                #blogContainer {
+                background: rgb(255,255,255);
+            }
+            </style>
+            <script>
+                // script start
+                $(document).ready(function() {
+                    setTimeout(function() {
+                        checkBlogStatus();
+                    }, 1000);
+                });
+                
+                var checkBlogStatus = function() {
+                    if (document.getElementsByClassName('blogPost').length === 0 || (document.getElementsByClassName('blogPost').length === 1 && document.getElementsByClassName('blogPost')[0].innerHTML.trim() === '')) {
+                        document.getElementById('noPostBlog').style.display = '';
+                    }
+                }
+                // script end
+            </script>
+        </section>
+<section id="contact">
+            <div class="sectionOverlay" id="contactOverlay" style="background: rgba(0, 0, 0, 0.3);"></div>
+            <div id="outerContact" class="outerSection noCustomElement">
+    <div id="contactContainer" class="sectionContainer contactImageBg noCustomElement customImageBg" style="margin-bottom: 0px; background: url(&quot;https://images.unsplash.com/uploads/1413222992504f1b734a6/1928e537?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wzMjE1M3wwfDF8c2VhcmNofDE1fHxjb250YWN0JTIwdXN8ZW58MHx8fHwxNzEyMjI5NjkwfDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=1080&quot;) center center / cover no-repeat fixed;">
+        <div id="contactContent" class="sectionContent container-fluid noCustomElement">
+            <div class="row noCustomElement">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 noCustomElement">
+                    <div id="contactTitleWrap"><h2 id="contactTitle" class="contactTitles" altonclick="null" althref="null">Get In Touch</h2></div>
+                    <div class="contactInfoOuter">
+                        <div id="contactAddressWrap" class="contactAddressInline noCustomElement"><p id="contactAddress1" class="contactInfoText text-custom-id-fYoUWoOIwkBUvGezEBwY2H2qWClmKc2E5t1dwVAr" altonclick="null" althref="null">Baloch Mujahid
+                            Community Center, Ibrahim Hyderi, near PAF Kiet Korangi Creek Karachi</p></div>
+                        <div id="‘contactCityWrap’" class="contactAddressInline noCustomElement"><p id="contactAddress2" class="contactInfoText text-custom-id-fYoUWoOIwkBUvGezEBwY2H2qWClmKc2E5t1dwVAr" altonclick="null" althref="null"></p></div>
+                    </div>
+                    <div class="contactInfoOuter">
+                        <div id="contactPhoneNumberWrap" class="contactInfoInline noCustomElement"><p id="contactPhoneInner" class="contactInfoText text-custom-id-fYoUWoOIwkBUvGezEBwY2H2qWClmKc2E5t1dwVAr" altonclick="null" althref="null">0301 2973329&nbsp;</p></div>
+                        <div class="contactInfoInline noCustomElement"><p class="contactInfoText text-custom-id-fYoUWoOIwkBUvGezEBwY2H2qWClmKc2E5t1dwVAr" altonclick="null" althref="null"> | </p></div>
+                        <div id="‘contactEmailWrap’" class="contactInfoInline noCustomElement"><p id="contactEmailInner" class="contactInfoText text-custom-id-fYoUWoOIwkBUvGezEBwY2H2qWClmKc2E5t1dwVAr" altonclick="null" althref="null">betterfutureforpakistan@gmail.com</p></div>
+                    </div>
+                    <div id="contactSubtitleWrap"><h4 id="contactSubtitle" class="contactSubtitles" altonclick="null" althref="null"></h4></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-12">
+                    <form id="contactForm"> 
+                        <div id="contactRowContainer">
+                            <!-- inputTemplate start --><div class="input1 row">
+                                <div class="contactInputWrap contactTemplate form-group col-sm-12">
+                                    <input id="contactName" type="text" class="contactFormInput form-control text-custom-id-qngcvs5HRd4b6YggpQO6010fJQD68lBzCMFKFsed" placeholder="Name" fdprocessedid="ua8ggh">
+                                </div>
+                                </div><div class="input1 row">
+                                <div class="contactInputWrap contactTemplate form-group col-sm-12">
+                                    <input id="contactEmail" type="text" class="contactFormInput form-control text-custom-id-qngcvs5HRd4b6YggpQO6010fJQD68lBzCMFKFsed" placeholder="Email" fdprocessedid="2izggr">
+                                </div>
+                                </div><div class="input1 row">
+                                <div class="contactInputWrap contactTemplate form-group col-sm-12">
+                                    <input id="contactPhone" type="text" class="contactFormInput form-control text-custom-id-qngcvs5HRd4b6YggpQO6010fJQD68lBzCMFKFsed" placeholder="Phone" fdprocessedid="wbcase">
+                                </div>
+                                </div><div class="input1 row">
+                                
+                                </div><div class="input1 row">
+                                <div class="contactInputWrap contactTemplate form-group col-sm-12">
+                                    <input id="contactCity" type="text" class="contactFormInput form-control text-custom-id-qngcvs5HRd4b6YggpQO6010fJQD68lBzCMFKFsed" placeholder="City" fdprocessedid="nk108a">
+                                </div>
+                                </div><div class="input1 row">
+                                <div class="contactInputWrap contactTemplate form-group col-sm-12">
+                                    <input id="contactState" type="text" class="contactFormInput form-control text-custom-id-qngcvs5HRd4b6YggpQO6010fJQD68lBzCMFKFsed" placeholder="State" fdprocessedid="6bd3mn">
+                                </div>
+                                </div><!-- inputTemplate end -->
+                        </div>
+                        <div class="form-row row">
+                            <div class="contactInputWrap form-group col-sm-12 col-xs-12">
+                                <textarea placeholder="Message" id="contactMessage" class="contactFormInput form-control text-custom-id-qngcvs5HRd4b6YggpQO6010fJQD68lBzCMFKFsed"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row row">
+                            <div class="contactInputWrap form-group col-sm-12 col-xs-12">
+                                <div id="contactButtons"><a class="contactButton text-custom-id-fSTGBmpjqR5jijoQDTRiy22AMCG6E6ZchfewMUiS" althref="null" onclick="submitContactForm()">Send via email...</a></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12" style="position: relative;">
+                    <iframe id="contactMap" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=en&amp;q=https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14488.38191754926!2d67.138117!3d24.7921839!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33b7a6a4c7679%253A0xded49f6e233e20d7!2sBaloch%2520Mujahid%2520Learning%2520and%2520Development%2520Center!5e0!3m2!1sen!2s!4v1710002065032!5m2!1sen!2s+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" altonclick="null" althref="null"><a href="https://www.maps.ie/map-my-route/"></a></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        #contact {
+            color: black;
+        }
+
+        #contact .contactImageBg {
+            color: white;
+        }
+
+        #contactContent {
+            word-wrap: break-word;
+            text-align: center;
+        }
+
+        #contactTitleWrap {
+            margin-bottom: 30px;
+        }
+
+        #contactTitle {
+            font-size: 45px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .contactInfoText {
+            font-size: 16px;
+        }
+
+        #contactCityWrap {
+            margin-bottom: 0;
+        }
+
+        .contactAddressInline,
+        .contactInfoInline {
+            display: inline-block;
+        }
+
+        #contactSubtitleWrap {
+            margin: 30px 0 40px;
+        }
+
+        #contactSubtitle {
+            font-size: 25px;
+            margin: 10px 0;
+        }
+
+        .contactFormInput {
+            color: white;
+            border: none;
+            box-shadow: none;
+            background-color: rgba(86,86,86,0.3);
+            border-radius: 0;
+        }
+
+        .contactFormInput:hover {
+            background-color: rgba(86,86,86,0.4);
+        }
+
+        .contactFormInput::placeholder {
+            color: white;
+        }
+
+        #contact .contactImageBg .contactFormInput {
+            background-color: rgba(255,255,255,0.3);
+            color: white;
+        }
+        
+        #contact .contactImageBg .contactFormInput:hover {
+            background-color: rgba(255,255,255,0.4);
+        }
+
+        #contact .contactImageBg .contactFormInput::placeholder {
+            color: white;
+        }
+
+        #contactMessage {
+            height: 70px;
+            resize: none;
+        }
+
+        #contactButtons {
+            margin-top: 10px;
+        }
+
+        .contactButton {
+            color: white;
+            padding: 6px 42px;
+            border: none;
+            background-color: rgb(86,86,86);
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.5s;
+            display: inline-block;
+        }
+
+        .contactButton:focus {
+            color: black;
+        }
+
+        .contactButton:hover {
+            color: white;
+            background-color: rgba(86,86,86,0.6);
+            text-decoration: none;
+        }
+
+        #contact .contactImageBg .contactButton,
+        #contact .contactImageBg .contactButton:focus {
+            color: white;
+            background-color: rgba(255,255,255,0.3);
+        }
+
+        #contact .contactImageBg .contactButton:hover {
+            color: black;
+            background-color: white;
+        }
+
+        #contactMap {
+            width: 100%;
+            height: 400px;
+        }
+
+        #contactMap {
+            margin-top: 40px;
+        }
+
+        /* * * * * * * * */
+
+        #contact .customTitle {
+            font-size: 40px;
+            display: block;
+        }
+
+        #contact .customParagraph {
+            font-size: 18px;
+            display: block;
+        }
+
+        #contact .customLink {
+            color: black;
+            font-size: 18px;
+            display: block;
+            width: 100%;
+        }
+
+        #contact .contactImageBg .customLink {
+            color: white;
+        }
+
+        #contact .customLink:hover {
+            opacity: 0.6;
+            text-decoration: none;
+        }
+
+        #contact .customIcon {
+            font-size: 36px;
+        }
+
+        #contact .customTitle,
+        #contact .customParagraph,
+        #contact .customLink,
+        #contact .customIcon,
+        #contact .customButton,
+        #contact .customImage,
+        #contact .customEmbed {
+            margin: 10px 0;
+        }
+        
+        #contact .contactInfoOuter .customTitle,
+        #contact .contactInfoOuter .customParagraph,
+        #contact .contactInfoOuter .customLink,
+        #contact .contactInfoOuter .customIcon,
+        #contact .contactInfoOuter .customButton,
+        #contact .contactInfoOuter .customImage,
+        #contact .contactInfoOuter .customEmbed {
+            margin: 0 0 10px;
+        }
+
+        @media only screen and (max-width : 800px) {
+
+            #contactTitle {
+                font-size: 40px;
+            }
+        }
+
+        @media only screen and (max-width : 767px) {
+
+            #contactTitle {
+                font-size: 32px;
+            }
+
+            .contactInfoText {
+                font-size: 14px;
+            }
+
+            #contactSubtitle {
+                font-size: 22px;
+            }
+
+            #contact .customTitle {
+                font-size: 32px;
+            }
+        }
+    </style>
+</div>
+            <style>
+                #contactContainer {
+                background: url('/img/charity-kLsj7-2fiz5-Krtu2-AzMok-hBaLV.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+            }
+            </style>
+        </section>
+<div id="footer">
+    <h4 class="pageFooter" id="footerFour" altonclick="null" althref="null">© BFFP</h4>
+</div>
+
+<div id="newsletterOuter" delay="20000" enabled="false" style="display:none" class="noCustomElement">
+    <div id="newsOverlaySection" class="noCustomElement">
+        <div class="row innerTableContent noCustomElement">
+            <div id="newsletterBorder" class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 noCustomElement">
+                <button id="closeNewsletterButton" class="newsletterClose" althref="null" onclick="document.getElementById(newsletterOuter).style.display = none">
+                    <i class="newsletterCloseIcon fa fa-times" aria-hidden="true" altonclick="null" althref="null"></i>
+                </button>
+                <div id="newsletterTitleWrap"><h3 id="newsletterTitle" class="newsLetterTitles" altonclick="null" althref="null">SUBSCRIBE TO OUR MAILING LIST</h3></div>
+                <div id="newsletterTopHrWrap"><hr id="newsletterHr" class="newsletterHrs"></div>
+                <div id="newsletterSubtitle1Wrap"><h4 id="newsletterSubtitle1" class="newsletterSubtitles" altonclick="null" althref="null">Sign up for all the latest news, offers, and discounts</h4></div>
+                <div id="newsletterSubtitle2Wrap"><h4 id="newsletterSubtitle2" class="newsletterSubtitles" altonclick="null" althref="null">Enjoy 10% off your first order when you join our email list</h4></div>
+                <div id=""><hr id="newsletterHr" class="newsletterHrs"></div>
+                <div id="newsletterBottomHrWrap"><i class="newsletterIcon far fa-envelope" altonclick="null" althref="null"></i></div>
+                <form id="newsletterForm"> 
+                    <div id="newsletterRowContainer"> 
+                        <input id="newsletterInput" type="email" class="form-control" placeholder="Email Address">
+                        <a id="newsletterButton" class="newsletterButton" althref="null" onclick="submitNewsletter()">SIGN UP</a>
+                    </div>
+                </form>
+                <div id="newsletterSubtitle3Wrap"><h4 id="newsletterSubtitle3" class="newsletterSubtitles3" altonclick="null" althref="null">SIGN UP IS FREE! GET STARTED TODAY!</h4></div>
+            </div>
+        </div>
+    </div>
+    <style>
+
+        #newsLetterOuter {
+            word-break: break-word;
+        }
+
+        #closeNewsletterButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: none;
+            font-size: 20px;
+            background: transparent;
+            cursor: pointer;
+            color: black;
+            transition: 0.4s;
+        }
+
+        #closeNewsletterButton:hover {
+            opacity: 0.6;
+        } 
+
+        #newsOverlaySection {
+            display: table;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            text-align: center;
+        }
+
+        #newsletterBorder {
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 0 6px -1px white;
+        }
+
+        #newsletterTitle {
+            font-size: 40px;
+            margin: 50px 0 30px;
+            color: black;
+            width: 100%;
+        }
+
+        .newsletterHrs {
+            border: 2px solid black;
+            width: 15%;
+            margin: 10px auto;
+        }
+
+        .newsletterSubtitles {
+            color: rgba(0,0,0,0.7);
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .newsletterIcon {
+            font-size: 50px;
+            margin-top: 20px;
+        }
+
+        #newsletterInput {
+            font-size: 12px;
+            width: 50%;
+            margin: 10px auto 0;
+            text-align: center;
+            letter-spacing: .1em;
+            border-color: black;
+            border-radius: 2px;
+            color: black;
+        }
+
+        #newsletterInput::placeholder {
+            color: black;
+        }
+        
+        #newsletterInput:focus {
+            box-shadow: 0 0 3px black;
+        }
+
+        #newsletterButton {
+            color: white;
+            font-size: 18px;
+            padding: 6px 48px;
+            margin-top: 10px;
+            text-decoration: none;
+            background: rgba(0,0,0,0.7);
+            border-radius: 30px;
+            letter-spacing: .1em;
+            cursor: pointer;
+            transition: 0.5s;
+            display: inline-block;
+        }
+
+        #newsletterButton:focus {
+            color: white;
+        }
+
+        #newsletterButton:hover {
+           background: black;
+        }
+
+        #newsletterSubtitle3 {
+            font-size: 14px;
+            margin: 30px 0;
+            letter-spacing: 0.1em;
+        }
+
+        /* * * * * * * * */
+
+        #newsletterOuter .customTitle {
+            font-size: 40px;
+            display: block;
+        }
+
+        #newsletterOuter .customParagraph {
+            font-size: 18px;
+            display: block;
+        }
+
+        #newsletterOuter .customLink {
+            color: black;
+            font-size: 18px;
+            display: block;
+            width: 100%;
+        }
+
+        #newsletterOuter .customLink:hover {
+            opacity: 0.6;
+            text-decoration: none;
+        }
+
+        #newsletterOuter .customIcon {
+            font-size: 28px;
+        }
+
+        #newsletterOuter .customTitle,
+        #newsletterOuter .customParagraph,
+        #newsletterOuter .customLink,
+        #newsletterOuter .customIcon,
+        #newsletterOuter .customButton,
+        #newsletterOuter .customImage,
+        #newsletterOuter .customEmbed {
+            margin: 10px 0;
+        }
+
+        @media only screen and (max-width : 950px) {
+
+            #newsletterInput {
+                width: 60%;
+            }
+        }
+
+        @media only screen and (max-width : 767px) {
+
+            #closeNews {
+                right: 20px;
+                top: 20px;
+            }
+
+            #newsletterTitle {
+                font-size: 35px;
+            }
+
+            #newsletterSubtitle {
+                font-size: 14px;
+            }
+
+            #newsletterInput {
+                width: 70%;
+            }
+        }
+
+        @media only screen and (max-width : 500px) {
+
+            #newsletterInput {
+                width: 90%;
+            }
+        }
+    </style>
+</div>
+
+<script id="generalJS">
+    $(document).ready(function() {
+        loadLeiaAd();
+        initializeSmoothScroll();
+        if (window.self !== window.top) {
+            if (document.getElementById('menuOverlaySection')) {
+                document.getElementById('menuOverlaySection').style.height = window.parent.innerHeight.toString() + 'px';
+            }
+            
+            if (document.getElementById('menuBorder')) {
+                document.getElementById('menuBorder').style.maxHeight = window.parent.innerHeight.toString() + 'px';
+            }
+            
+            if (window.orientation !== undefined && document.getElementById('headerBackgroundVideo')) {
+                updateBgimageSizes();
+                window.addEventListener('orientationchange', function() {
+                    updateBgimageSizes();
+                });
+            }
+        } else if (document.getElementById('newsletterOuter') && document.getElementById('newsletterOuter').getAttribute('enabled') === 'true') {
+            var time = parseInt(document.getElementById('newsletterOuter').getAttribute('delay'));
+            if (time > 0) {
+                setTimeout(function() {
+                    $('#newsletterOuter').css('opacity', '0');
+                    $('#newsletterOuter').css('display', '');
+                    $('#newsletterOuter').animate({opacity: '1'}, 1000);
+                }, time);
+            }
+        }
+    });
+    
+    var initializeSmoothScroll = function() {
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 1000);
+        });
+    }
+    
+    var updateBgimageSizes = function() {
+        document.getElementById('headerBackgroundVideo').style.height = document.getElementById('headerContainer').offsetHeight.toString() + 'px';
+    }
+
+    var loadLeiaAd = function() {
+        /*$.ajax({
+            url: 'https://heyleia.com/php/getAdStatus.php',
+            type: 'GET',
+            data: {'domain': window.location.hostname},
+            success: function(type) {
+                if (type === 'ad') {
+                    addLeiaAd();
+                }
+            },
+            error: function(err) {
+                console.log(err);
+            }
+        });*/
+    }
+    
+    var meetingToken;
+    var submitVideoChat = function() {
+        var name = document.getElementById('videoName').value;
+        var email = document.getElementById('videoEmail').value;
+
+        document.getElementById('launchChatButton').disabled = true;
+
+        var spinner = document.createElement('div');
+        var outer = document.createElement('div');
+
+        outer.id = 'spinnerLoading';
+        spinner.className = 'spinnerLoading';
+        outer.style.background = 'rgba(0,0,0,0.7)';
+        outer.style.borderRadius = '20px';
+        outer.style.position = 'fixed';
+        outer.style.left = ((window.innerWidth - 205) / 2).toString() + 'px';
+        outer.style.width = '205px';
+        outer.style.top = '30%';
+        outer.style.height = '205px';
+        outer.style.zIndex = '10000';
+        spinner.style.marginLeft = '42.5px';
+        spinner.style.marginTop = '42.5px';
+        outer.appendChild(spinner);
+        document.body.appendChild(outer);
+
+        if (!addedSpinner) {
+            addedSpinner = true;
+            addSpinnerStyle();
+        }
+
+        $.ajax({
+            url: 'https://heyleia.com/php/scheduleMeeting.php',
+            type: 'POST',
+            data: {name: name, email: email, partner: ''},
+            success: function(data) {
+                meetingToken = data;
+                document.getElementById('launchChatButton').disabled = false;
+                swal('Meeting Ready', 'Click the "Launch Meeting" button to start your video chat.', 'success');
+                document.getElementById('spinnerLoading').parentElement.removeChild(document.getElementById('spinnerLoading'));
+            },
+            error: function(err) {
+                console.log(err);
+                swal('Uh Oh', 'There was an error scheduling your live chat. Please try again in a few minutes!', 'error');
+                document.getElementById('spinnerLoading').parentElement.removeChild(document.getElementById('spinnerLoading'));
+            }
+        })
+    }
+
+    var launchVideoChat = function() {
+        window.open('https://leia-clhwlytpny0tna0rrrmo6inno.braidio.com/meetings/' + meetingToken, '_blank');
+    }
+
+    var showVideo = function() {
+        document.getElementById('videoChatOverlay').style.display = '';
+    }
+
+    var closeVideo = function() {
+        document.getElementById('videoChatOverlay').style.display = 'none';
+    }
+    
+    var shownSchedule = false;
+    var showSchedule = function() {
+        document.getElementById('schedulingOverlay').style.display = '';
+        
+        if (shownSchedule) {
+            var frame = document.getElementById('schedulingOverlay').getElementsByTagName('iframe')[0];
+            var src = frame.getAttribute('src').split('&v')[0];
+            frame.setAttribute('src', src + '&v=' + new Date().getTime());
+        }
+        
+        shownSchedule = true;
+    }
+    
+    var closeSchedule = function() {
+        document.getElementById('schedulingOverlay').style.display = 'none';
+    }
+
+    var addLeiaAd = function() {
+        var img = document.createElement('img');
+        var tag = document.createElement('a');
+        img.id = 'leiaAdLogo';
+        tag.id = 'leiaAdLogoA';
+        img.setAttribute('src', 'https://heyleia.com/images/poweredBy.png');
+
+        if (window.self === window.top && window.location.search !== '?site=live') {
+            tag.setAttribute('href', 'https://heyleia.com/direct?src=site');
+            tag.setAttribute('target', '_blank');
+        } else {
+            img.onclick = function() {
+                if (window.location.search === '?site=live') {
+                    swal('Remove Leia Ad', 'You can remove this ad by upgrading to Leia Pro! This includes hosting and everything else you need for your site.', 'info');
+                } else {
+                    swal({
+                        title: 'Remove Leia Ad',
+                        text: 'You can remove this ad by upgrading to Leia Pro! This includes hosting and everything else you need for your site.',
+                        type: 'info',
+                        icon: 'info',
+                        closeOnClickOutside: true,
+                        showCancelButton: true,
+                        buttons: {
+                            cancel: 'Not Now',
+                            submit: {
+                                text: 'Learn More',
+                                value: 'learn',
+                            }
+                        },
+                        closeOnConfirm: true
+                    }).then(function(isConfirm) {
+                        if (isConfirm == 'learn') {
+                            window.open('https://heyleia.com/upgrade', '_blank');
+                        } 
+                    }); 
+                }
+            }
+        }
+
+        tag.appendChild(img);
+        document.body.appendChild(tag);
+    }
+    
+    var mainColor = 'rgb(86,86,86)';
+    
+    var applyFancyTop = function(top) {
+        if (document.getElementById('fancyStyle')) {
+            document.getElementById('fancyStyle').parentElement.removeChild(document.getElementById('fancyStyle'));
+        }
+        
+        var style = document.createElement('style');
+        style.id = 'fancyStyle';
+        var txt = document.createTextNode('#fancybox-wrap {top: ' + top.toString() + 'px !important;}');
+        style.appendChild(txt);
+        document.body.appendChild(style);
+    }
+    
+    var addedSpinner = false;
+    var submitContactForm = function() {
+        swal("Are you sure you want to submit this message?", {
+            buttons: {
+                no: {
+                    text: "Cancel",
+                    value: "Cancel",
+                    className: 'swal-button swal-button--cancel',
+                    closeModal: false,
+                },
+                yes: {
+                    text: "Submit",
+                    value: "ok"
+                },
+            },
+            title: 'Confirmation',
+            type: 'info',
+            icon: 'info'
+        }).then((value) => {
+            if (value === 'Cancel') {
+                swal.close();
+            } else {
+                var spinner = document.createElement('div');
+                var outer = document.createElement('div');
+
+                outer.id = 'spinnerLoading';
+                spinner.className = 'spinnerLoading';
+                outer.style.background = 'rgba(0,0,0,0.7)';
+                outer.style.borderRadius = '20px';
+                outer.style.position = 'fixed';
+                outer.style.left = ((window.innerWidth - 205) / 2).toString() + 'px';
+                outer.style.width = '205px';
+                outer.style.top = '30%';
+                outer.style.height = '205px';
+                outer.style.zIndex = '10000';
+                spinner.style.marginLeft = '42.5px';
+                spinner.style.marginTop = '42.5px';
+                outer.appendChild(spinner);
+                document.body.appendChild(outer);
+
+                if (!addedSpinner) {
+                    addedSpinner = true;
+                    addSpinnerStyle();
+                }
+
+                var dataObj = {}
+                if (document.getElementById('contactName')) {
+                    dataObj['name'] = document.getElementById('contactName').value;
+                }
+                if (document.getElementById('contactEmail')) {
+                    dataObj['email'] = document.getElementById('contactEmail').value;
+                }
+                if (document.getElementById('contactPhone')) {
+                    dataObj['phone'] = document.getElementById('contactPhone').value;
+                }
+                if (document.getElementById('contactCompany')) {
+                    dataObj['company'] = document.getElementById('contactCompany').value;
+                }
+                if (document.getElementById('contactStreet')) {
+                    dataObj['street'] = document.getElementById('contactStreet').value;
+                }
+                if (document.getElementById('contactCity')) {
+                    dataObj['city'] = document.getElementById('contactCity').value;
+                }
+                if (document.getElementById('contactState')) {
+                    dataObj['state'] = document.getElementById('contactState').value;
+                }
+                if (document.getElementById('contactSubject')) {
+                    dataObj['subject'] = document.getElementById('contactSubject').value;
+                }
+                if (document.getElementById('contactMessage')) {
+                    dataObj['message'] = document.getElementById('contactMessage').value;
+                }
+
+                $.ajax({
+                    url: 'https://heyleia.com/php/clientContact.php',
+                    data: dataObj,
+                    type: 'POST',
+                    success: function(data) {
+                        document.getElementById('spinnerLoading').parentElement.removeChild(document.getElementById('spinnerLoading'));
+                        if (data === 'success') {
+                            swal("Success", "You have successfully submitted your message! We will contact you at our earliest convenience.", "success");
+                            document.body.className = '';
+                        } else {
+                            swal("Uh Oh!", data, "error");
+                            document.body.className = '';
+                        }
+                    },
+                    error: function(err) {
+                        console.log(err);
+                        document.getElementById('spinnerLoading').parentElement.removeChild(document.getElementById('spinnerLoading'));
+                        swal("Uh Oh!", "There was a problem. Please try again later.", "error");
+                        document.body.className = '';
+                    }
+                });
+            }
+        });
+    }
+    
+    var submitNewsletter = function() {
+        var spinner = document.createElement('div');
+        var outer = document.createElement('div');
+
+        outer.id = 'spinnerLoading';
+        spinner.className = 'spinnerLoading';
+        outer.style.background = 'rgba(0,0,0,0.7)';
+        outer.style.borderRadius = '20px';
+        outer.style.position = 'fixed';
+        outer.style.left = ((window.innerWidth - 205) / 2).toString() + 'px';
+        outer.style.width = '205px';
+        outer.style.top = '30%';
+        outer.style.height = '205px';
+        outer.style.zIndex = '10000';
+        spinner.style.marginLeft = '42.5px';
+        spinner.style.marginTop = '42.5px';
+        outer.appendChild(spinner);
+        document.body.appendChild(outer);
+
+        if (!addedSpinner) {
+            addedSpinner = true;
+            addSpinnerStyle();
+        }
+
+        var dataObj = {
+            email: document.getElementById('newsletterInput').value
+        }
+        
+        $.ajax({
+            url: 'https://heyleia.com/php/clientNewsletter.php',
+            data: dataObj,
+            type: 'POST',
+            success: function(data) {
+                document.getElementById('spinnerLoading').parentElement.removeChild(document.getElementById('spinnerLoading'));
+                if (data === 'success') {
+                    swal("Success", "You have successfully subscribed to our mailing list!", "success").then(function() {
+                        document.getElementById('newsletterOuter').style.display = 'none';
+                    });
+                    
+                    document.body.className = '';
+                } else {
+                    swal("Uh Oh!", data, "error");
+                    document.body.className = '';
+                }
+            },
+            error: function(err) {
+                console.log(err);
+                document.getElementById('spinnerLoading').parentElement.removeChild(document.getElementById('spinnerLoading'));
+                swal("Uh Oh!", "There was a problem. Please try again later.", "error");
+                document.body.className = '';
+            }
+        });
+    }
+    
+    var addSpinnerStyle = function() {
+        var style = document.createElement('style');
+        style.appendChild(document.createTextNode(".spinnerLoading {border: 16px solid #f3f3f3; /* Light grey */border-top: 16px solid #3498db; /* Blue */border-radius: 50%;width: 120px;height: 120px;animation: spin 2s linear infinite;}@keyframes spin {0% { transform: rotate(0deg); }100% { transform: rotate(360deg); }}"));
+        document.body.appendChild(style);
+    };
+</script>
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;" altonclick="null" althref="null"></span><span id="PING_IFRAME_FORM_DETECTION" style="display: none;" altonclick="null" althref="null"></span><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration><span id="PING_IFRAME_FORM_DETECTION" style="display: none;" altonclick="null" althref="null"></span><style id="customCSS">.text-custom-id-fYoUWoOIwkBUvGezEBwY2H2qWClmKc2E5t1dwVAr{font-size: 20px !important;}@media only screen and (max-width : 800px) {.text-custom-id-fYoUWoOIwkBUvGezEBwY2H2qWClmKc2E5t1dwVAr{font-size: 2px !important;}}.text-custom-id-fSTGBmpjqR5jijoQDTRiy22AMCG6E6ZchfewMUiS{font-size: 16px !important;}@media only screen and (max-width : 800px) {.text-custom-id-fSTGBmpjqR5jijoQDTRiy22AMCG6E6ZchfewMUiS{font-size: 1px !important;}}.text-custom-id-qngcvs5HRd4b6YggpQO6010fJQD68lBzCMFKFsed{font-size: 16px !important;}@media only screen and (max-width : 800px) {.text-custom-id-qngcvs5HRd4b6YggpQO6010fJQD68lBzCMFKFsed{font-size: 1px !important;}}</style><span id="PING_IFRAME_FORM_DETECTION" style="display: none;" altonclick="null" althref="null"></span><span id="PING_IFRAME_FORM_DETECTION" style="display: none;" altonclick="null" althref="null"></span><span id="PING_IFRAME_FORM_DETECTION" style="display: none;" altonclick="null" althref="null"></span><span id="PING_IFRAME_FORM_DETECTION" style="display: none;" altonclick="null" althref="null"></span></body></html>
