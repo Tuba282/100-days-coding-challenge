@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // string conversation
+        let value = true;
+alert(typeof value); // boolean
+
+let new_value = value.toString(); // now value is a string "true"
+alert(typeof new_value); // string
+
+// numeric conversion
+let str = "123";
+alert(typeof str); // string
+
+let num1 = Number(str); // becomes a number 123
+let num2 = Number(null); // 0
+let num3 = Number(true); // 1
+let num4 = Number(false); // 0
+let num5 = Number(undefined); // NaN
+
+alert(typeof num); // number
+// boolean conversion
+alert(Boolean(1)); // true
+alert(Boolean(0)); // false
+
+alert(Boolean("hello")); // true
+
+alert(Boolean("")); // false
+    </script>
+</body>
+</html>
